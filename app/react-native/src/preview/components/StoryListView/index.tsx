@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { SectionList, TextInput, TouchableOpacity, View, SafeAreaView } from 'react-native';
 import styled from '@emotion/native';
-import Events from '@storybook/core-events';
-import addons from '@storybook/addons';
+import {SET_CURRENT_STORY, STORY_ADDED} from '@storybook/core-events';
+import { addons } from '@storybook/addons';
+
 import { EmotionProps } from '../Shared/theme';
 import { Header, Name } from '../Shared/text';
 
@@ -89,13 +90,13 @@ export default class StoryListView extends Component<Props, State> {
 
   componentDidMount() {
     const channel = addons.getChannel();
-    channel.on(Events.STORY_ADDED, this.handleStoryAdded);
+    channel.on(STORY_ADDED, this.handleStoryAdded);
     this.handleStoryAdded();
   }
 
   componentWillUnmount() {
     const channel = addons.getChannel();
-    channel.removeListener(Events.STORY_ADDED, this.handleStoryAdded);
+    channel.removeListener(STORY_ADDED, this.handleStoryAdded);
   }
 
   handleStoryAdded = () => {
@@ -148,7 +149,7 @@ export default class StoryListView extends Component<Props, State> {
 
   changeStory(kind: string, story: string) {
     const channel = addons.getChannel();
-    channel.emit(Events.SET_CURRENT_STORY, { kind, story });
+    channel.emit(SET_CURRENT_STORY, { kind, story });
   }
 
   render() {

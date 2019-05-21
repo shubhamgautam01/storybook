@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import styled from '@emotion/native';
 import Events from '@storybook/core-events';
-import addons from '@storybook/addons';
+import { addons } from '@storybook/addons';
 import Channel from '@storybook/channels';
 import StoryListView from '../StoryListView';
 import StoryView from '../StoryView';

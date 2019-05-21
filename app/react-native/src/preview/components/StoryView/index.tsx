@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+
+import { addons } from '@storybook/addons';
 import styled from '@emotion/native';
-import addons from '@storybook/addons';
-import Events from '@storybook/core-events';
+
+import { SELECT_STORY, FORCE_RE_RENDER } from '@storybook/core-events';
 
 interface Props {
   listenToEvents: boolean;
@@ -28,8 +30,8 @@ export default class StoryView extends Component<Props, State> {
   componentDidMount() {
     if (this.props.listenToEvents) {
       const channel = addons.getChannel();
-      channel.on(Events.SELECT_STORY, this.selectStory);
-      channel.on(Events.FORCE_RE_RENDER, this.forceReRender);
+      channel.on(SELECT_STORY, this.selectStory);
+      channel.on(FORCE_RE_RENDER, this.forceReRender);
     }
   }
 
@@ -38,8 +40,8 @@ export default class StoryView extends Component<Props, State> {
 
     if (listenToEvents) {
       const channel = addons.getChannel();
-      channel.removeListener(Events.SELECT_STORY, this.selectStory);
-      channel.removeListener(Events.FORCE_RE_RENDER, this.forceReRender);
+      channel.removeListener(SELECT_STORY, this.selectStory);
+      channel.removeListener(FORCE_RE_RENDER, this.forceReRender);
     }
   }
 

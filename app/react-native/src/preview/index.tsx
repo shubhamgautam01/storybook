@@ -3,7 +3,7 @@ import { AsyncStorage } from 'react-native';
 import { ThemeProvider } from 'emotion-theming';
 // @ts-ignore
 import getHost from 'rn-host-detect';
-import addons from '@storybook/addons';
+import { addons } from '@storybook/addons';
 import Events from '@storybook/core-events';
 import Channel from '@storybook/channels';
 import createChannel from '@storybook/channel-websocket';

@@ -1,5 +1,6 @@
 import { createElement } from 'react';
-import addons, { types } from '@storybook/addons';
+import { addons, types } from '@storybook/addons';
+
 import { ContextsManager } from './manager/ContextsManager';
 import { ID } from './shared/constants';
 

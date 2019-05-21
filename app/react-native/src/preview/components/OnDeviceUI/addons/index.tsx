@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
+
+import { addons } from '@storybook/addons';
 import styled from '@emotion/native';
-import addons from '@storybook/addons';
 import AddonsList from './list';
 import AddonWrapper from './wrapper';
 import { Label } from '../../Shared/text';

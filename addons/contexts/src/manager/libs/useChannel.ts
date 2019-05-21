@@ -1,6 +1,9 @@
-import addons from '@storybook/addons';
 import { useEffect } from 'react';
+import { addons } from '@storybook/addons';
+
 import { AnyFunctionReturns } from '../../shared/types.d';
+
+export { Channel } from '@storybook/channels';
 
 /**
  * The React hook version of Storybook Channel API.

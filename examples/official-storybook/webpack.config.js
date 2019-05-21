@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = async ({ config }) => ({
   ...config,
   module: {
@@ -37,16 +35,6 @@ module.exports = async ({ config }) => ({
           },
         ],
         exclude: [/node_modules\/(?!@storybook)/, /dist/],
-      },
-      {
-        test: /\.stories\.jsx?$/,
-        use: require.resolve('@storybook/addon-storysource/loader'),
-        include: [
-          path.resolve(__dirname, './stories'),
-          path.resolve(__dirname, '../../lib/ui/src'),
-          path.resolve(__dirname, '../../lib/components/src'),
-        ],
-        enforce: 'pre',
       },
     ],
   },

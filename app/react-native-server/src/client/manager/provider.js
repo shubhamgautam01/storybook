@@ -1,10 +1,18 @@
 import React from 'react';
+import uuid from 'uuid';
+
 import { Consumer } from '@storybook/api';
 import { Provider } from '@storybook/ui';
 import createChannel from '@storybook/channel-websocket';
-import addons from '@storybook/addons';
-import Events from '@storybook/core-events';
-import uuid from 'uuid';
+import { addons } from '@storybook/addons';
+import {
+  CHANNEL_CREATED,
+  GET_CURRENT_STORY,
+  SET_CURRENT_STORY,
+  GET_STORIES,
+  STORY_CHANGED,
+} from '@storybook/core-events';
+
 import PreviewHelp from './components/PreviewHelp';
 
 const mapper = ({ state, api }) => ({
@@ -29,7 +37,7 @@ export default class ReactProvider extends Provider {
     const channel = this.channel || createChannel({ url });
 
     addons.setChannel(channel);
-    channel.emit(Events.CHANNEL_CREATED, {
+    channel.emit(CHANNEL_CREATED, {
       host,
       pairedId: this.pairedId,
       port,
@@ -51,7 +59,7 @@ export default class ReactProvider extends Provider {
         {({ storiesHash, storyId, api }) => {
           if (storiesHash[storyId]) {
             const { kind, story } = storiesHash[storyId];
-            api.emit(Events.SET_CURRENT_STORY, { kind, story });
+            api.emit(SET_CURRENT_STORY, { kind, story });
           }
           return <PreviewHelp />;
         }}
@@ -61,12 +69,12 @@ export default class ReactProvider extends Provider {
 
   handleAPI(api) {
     addons.loadAddons(api);
-    api.on(Events.STORY_CHANGED, () => {
-      api.emit(Events.SET_CURRENT_STORY, this.selection);
+    api.on(STORY_CHANGED, () => {
+      api.emit(SET_CURRENT_STORY, this.selection);
     });
-    api.on(Events.GET_CURRENT_STORY, () => {
-      api.emit(Events.SET_CURRENT_STORY, this.selection);
+    api.on(GET_CURRENT_STORY, () => {
+      api.emit(SET_CURRENT_STORY, this.selection);
     });
-    api.emit(Events.GET_STORIES);
+    api.emit(GET_STORIES);
   }
 }

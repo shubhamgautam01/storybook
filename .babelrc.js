@@ -2,7 +2,13 @@ const withTests = {
   presets: [
     [
       '@babel/preset-env',
-      { shippedProposals: true, useBuiltIns: 'usage', corejs: '3', targets: { node: 'current' } },
+      {
+        shippedProposals: true,
+        useBuiltIns: 'usage',
+        corejs: '3',
+        targets: { node: 'current' },
+        modules: 'commonjs',
+      },
     ],
   ],
   plugins: [
@@ -20,8 +26,10 @@ module.exports = {
         shippedProposals: true,
         useBuiltIns: 'usage',
         corejs: '3',
+        modules: false,
         targets: {
           esmodules: true,
+          browsers: ['Chrome >= 52', 'Explorer 11'],
         },
       },
     ],
@@ -63,8 +71,10 @@ module.exports = {
             shippedProposals: true,
             useBuiltIns: 'usage',
             corejs: '3',
+            modules: false,
             targets: {
               esmodules: true,
+              browsers: ['Chrome >= 52', 'Explorer 11'],
             },
           },
         ],
@@ -104,6 +114,7 @@ module.exports = {
               node: '8.11',
             },
             corejs: '3',
+            modules: 'commonjs',
           },
         ],
       ],
