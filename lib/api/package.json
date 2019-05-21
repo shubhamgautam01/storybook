@@ -15,7 +15,7 @@
   },
   "license": "MIT",
   "main": "dist/index.js",
-  "source": "src/index.ts",
+  "source": "src/index.tsx",
   "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "node ./scripts/generateVersion.js && node ../../scripts/prepare.js"

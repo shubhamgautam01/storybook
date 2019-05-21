@@ -28,7 +28,6 @@ module.exports = {
         corejs: '3',
         modules: false,
         targets: {
-          esmodules: true,
           browsers: ['Chrome >= 52', 'Explorer 11'],
         },
       },
@@ -73,7 +72,6 @@ module.exports = {
             corejs: '3',
             modules: false,
             targets: {
-              esmodules: true,
               browsers: ['Chrome >= 52', 'Explorer 11'],
             },
           },
