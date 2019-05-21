@@ -3998,9 +3998,9 @@
     source-map "^0.6.1"
 
 "@types/webpack@*", "@types/webpack@^4.4.24", "@types/webpack@^4.4.25", "@types/webpack@^4.4.27":
-  version "4.4.31"
-  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.4.31.tgz#f59b9d8210cf4d2fd254fe6d1f5ba86e557867f5"
-  integrity sha512-WNALmv/wxy2+OoF7A5GD8BVotXnkuMHlojVWKj/neFHU3Ut2Azbu1A7Yi2Vr6eX3z+31XgR/dJ5NpX4pQZ7ieQ==
+  version "4.4.32"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.4.32.tgz#2d460cd33a15e568e93f38de5e628cf846396c51"
+  integrity sha512-mNARoaSJTzbiHxtZbf9NULFilu2frqD+g9Iyl9V2jPYJWXi+AC3Hz8lQWPZ5LLtgUm7iF4SDDMB/1bPrbRQgFw==
   dependencies:
     "@types/anymatch" "*"
     "@types/node" "*"
@@ -19148,9 +19148,9 @@ listr@^0.14.2:
     rxjs "^6.3.3"
 
 lit-html@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-1.0.0.tgz#3dc3781a8ca68a9b5c2ff2a61e263662b9b2267b"
-  integrity sha512-oeWlpLmBW3gFl7979Wol2LKITpmKTUFNn7PnFbh6YNynF61W74l6x5WhwItAwPRSATpexaX1egNnRzlN4GOtfQ==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-1.1.0.tgz#6951fb717fb48fe34d915ae163448a04da321562"
+  integrity sha512-ZDJHpJi09yknMpjwPI8fuSl5sUG7+pF+eE5WciFtgyX7zebvgMDBgSLq4knXa7grxM00RkQ7PBd7UZQiruA78Q==
 
 livereload-js@^2.3.0:
   version "2.4.0"
@@ -20289,9 +20289,9 @@ marko-starter@^2.0.4:
     try-require "^1.2.1"
 
 marko@^4.1.1, marko@^4.10.0, marko@^4.16.15:
-  version "4.17.0"
-  resolved "https://registry.yarnpkg.com/marko/-/marko-4.17.0.tgz#7547e9653909fad2d288ce03d13ce9d9d5729674"
-  integrity sha512-ZswoT+y/4R9HoAI5xAvFpje57aUYgN9YpKrFaA4ikdEZ/uRGE9TzoD6uYmTPIuzBgvw9VHih+QIwhZfwMYQsoA==
+  version "4.17.1"
+  resolved "https://registry.yarnpkg.com/marko/-/marko-4.17.1.tgz#80fdc5285cdb761584a3c53d24859391bbad66c3"
+  integrity sha512-9OkUJa2qfFIGJ9GkRQKtX4UWTwFfBZRivrovvbS3tQTm3ObbJvZ0bMeDOs2IcTk7tpW/cPJeJt0OfMRH04Ck7w==
   dependencies:
     app-module-path "^2.2.0"
     argly "^1.0.0"
@@ -21430,9 +21430,9 @@ nan@^2.0.5, nan@^2.12.1, nan@^2.13.2, nan@^2.5.1, nan@^2.9.2:
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
 nanoid@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.0.2.tgz#2163edc84828cd42f9b8e4578979a4b5ffc1bb18"
-  integrity sha512-X4yQ8VHoFvHcykGunT2Jxrsm1c4vH5UKtau7LLJYXO1istCRE3jD8JxDyGCzN+h7dpWBCvWaSYgloRuphKRqUQ==
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.0.3.tgz#dde999e173bc9d7bd2ee2746b89909ade98e075e"
+  integrity sha512-NbaoqdhIYmY6FXDRB4eYtDVC9Z9eCbn8TyaiC16LNKtpPv/aqa0tOPD8y6gNE4yUNnaZ7LLhYtXOev/6+cBtfw==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -27879,35 +27879,10 @@ semver-intersect@1.4.0:
   dependencies:
     semver "^5.0.0"
 
-"semver@2 || 3 || 4 || 5", "semver@2.x || 3.x || 4 || 5", semver@^5.0.0, semver@^5.0.1, semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0, semver@^5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.0.tgz#790a7cf6fea5459bac96110b29b60412dc8ff96b"
-  integrity sha512-Ya52jSX2u7QKghxeoFGpLwCtGlt7j0oY9DYb5apt9nPlJ42ID+ulTXESnt/qAQcoSERyZ5sl3LDIOw0nAn/5DA==
-
-semver@5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
-  integrity sha512-4SJ3dm0WAwWy/NVeioZh5AntkdJoWKxHxcmyP622fOkgHa4z3R0TdBJICINyaSDE6uNwVc8gZr+ZinwZAH4xIA==
-
-semver@5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
-  integrity sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
-
-semver@6.0.0, semver@^6.0.0:
+"semver@2 || 3 || 4 || 5", "semver@2.x || 3.x || 4 || 5", semver@5.5.0, semver@5.6.0, semver@6.0.0, semver@^5.0.0, semver@^5.0.1, semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0, semver@^5.7.0, semver@^6.0.0, semver@~2.3.1, semver@~5.3.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.0.0.tgz#05e359ee571e5ad7ed641a6eec1e547ba52dea65"
   integrity sha512-0UewU+9rFapKFnlbirLi3byoOuhrSsli/z/ihNnvM24vgF+8sNBiI1LZPBSH9wJKUwaUbw+s3hToDLCXkrghrQ==
-
-semver@~2.3.1:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-2.3.2.tgz#b9848f25d6cf36333073ec9ef8856d42f1233e52"
-  integrity sha1-uYSPJdbPNjMwc+ye+IVtQvEjPlI=
-
-semver@~5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
-  integrity sha1-myzl094C0XxgEq0yaqa00M9U+U8=
 
 send@0.16.2, send@^0.16.2:
   version "0.16.2"
