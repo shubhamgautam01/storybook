@@ -3,11 +3,8 @@ import global from 'global';
 import { ReactElement } from 'react';
 import { Channel } from '@storybook/channels';
 import { API } from '@storybook/api';
-
 import { logger } from '@storybook/client-logger';
-import * as t from './types';
-
-export * from './types';
+import { types, Types, isSupportedType } from './types';
 
 export interface RenderOptions {
   active: boolean;
@@ -22,7 +19,7 @@ export interface MatchOptions {
 
 export interface Addon {
   title: string;
-  type?: t.Types;
+  type?: Types;
   id?: string;
   route?: (routeOptions: RouteOptions) => string;
   match?: (matchOptions: MatchOptions) => boolean;
@@ -30,6 +27,8 @@ export interface Addon {
 }
 
 export type Loader = (api: API) => void;
+
+export { types, Types, isSupportedType };
 
 interface Loaders {
   [key: string]: Loader;
@@ -42,11 +41,21 @@ interface Elements {
 }
 
 export class AddonStore {
+  constructor() {
+    this.promise = new Promise(res => {
+      this.resolve = () => res(this.getChannel());
+    }) as Promise<Channel>;
+  }
+
   private loaders: Loaders = {};
 
   private elements: Elements = {};
 
   private channel: Channel | undefined;
+
+  private promise: any;
+
+  private resolve: any;
 
   getChannel = (): Channel => {
     // this.channel should get overwritten by setChannel. If it wasn't called (e.g. in non-browser environment), throw.
@@ -59,13 +68,16 @@ export class AddonStore {
     return this.channel;
   };
 
+  ready = (): Promise<Channel> => this.promise;
+
   hasChannel = (): boolean => !!this.channel;
 
   setChannel = (channel: Channel): void => {
     this.channel = channel;
+    this.resolve();
   };
 
-  getElements = (type: t.Types): Collection => {
+  getElements = (type: Types): Collection => {
     if (!this.elements[type]) {
       this.elements[type] = {};
     }
@@ -74,7 +86,7 @@ export class AddonStore {
 
   addPanel = (name: string, options: Addon): void => {
     this.add(name, {
-      type: t.types.PANEL,
+      type: types.PANEL,
       ...options,
     });
   };
